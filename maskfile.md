@@ -2,6 +2,6 @@
 
 > Start hugo server locally with drafts
 
-```bash
+```nu
 hugo server --buildDrafts --buildFuture
 ```
