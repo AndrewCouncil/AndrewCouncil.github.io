@@ -38,26 +38,27 @@ jobs:
       HUGO_ENVIRONMENT: production
       TZ: America/New_York
     steps:
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-          sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: Install Dart Sass
-        run: |
-          wget -O ${{ runner.temp }}/dart-sass.tar.gz https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz
-          tar -xf ${{ runner.temp }}/dart-sass.tar.gz --directory ${{ runner.temp }}
-          mv ${{ runner.temp }}/dart-sass/ /usr/local/bin
-          echo "/usr/local/bin/dart-sass" >> $GITHUB_PATH
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
+
+      # get cache of nix store from cachix
+      - uses: cachix/install-nix-action@v31
+      - uses: cachix/cachix-action@v16
+        with:
+          name: hugo-site
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+
+      # configure pages and deps
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+
+      # build hugo with cache
       - name: Cache Restore
         id: cache-restore
         uses: actions/cache/restore@v4
@@ -70,7 +71,7 @@ jobs:
         run: git config core.quotepath false
       - name: Build with Hugo
         run: |
-          hugo \
+          nix develop --command hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
@@ -82,10 +83,18 @@ jobs:
           path: |
             ${{ runner.temp }}/hugo_cache
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
+
+      # create artifact of page
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+
+      # save shell nix state to cachix
+      - uses: cachix/cachix-action@v16
+        with:
+          name: hugo-site
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
   # Deployment job
   deploy:
