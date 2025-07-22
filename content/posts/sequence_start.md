@@ -26,6 +26,11 @@ let total_size = ($lfs_file_data | get size | math sum)
 print $"Total size: ($total_size)"
 ```
 
+```python
+import click
+click.echo("test")
+```
+
 ## Lists
 
 1. First
