@@ -15,6 +15,7 @@
     dos2unix.enable = true;
     keep-sorted.enable = true;
     mdformat.enable = true;
+    kdlfmt.enable = true;
     # buggy as of right now
     # nufmt.enable = true;
   };
