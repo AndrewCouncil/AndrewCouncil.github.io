@@ -1,0 +1,50 @@
+/* Import JetBrains Mono from Google Fonts with fallback to jsDelivr CDN */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+/* Override the monospace font variable to use JetBrains Mono with comprehensive fallbacks */
+:root {
+  --font-mono:
+    "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono",
+    Consolas, "Courier New", monospace;
+}
+
+/* Ensure all code elements use the JetBrains Mono font */
+code,
+pre,
+kbd,
+samp,
+.highlight,
+.chroma,
+.highlight pre,
+.highlight code,
+div[class*="language-"] pre,
+div[class*="language-"] code {
+  font-family: var(--font-mono) !important;
+}
+
+/* Fine-tune code appearance with JetBrains Mono */
+code {
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1; /* Enable ligatures */
+  font-variant-ligatures: contextual;
+}
+
+pre code {
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1;
+  font-variant-ligatures: contextual;
+}
+
+/* Ensure consistent font weight for inline code */
+p code,
+li code,
+td code {
+  font-weight: 400;
+}
+
+/* Ensure consistent font weight for code blocks */
+pre {
+  font-weight: 400;
+}
