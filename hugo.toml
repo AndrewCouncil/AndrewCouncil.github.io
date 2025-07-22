@@ -3,12 +3,8 @@ languageCode = 'en-us'
 title = 'Drew Council'
 theme = 'typo'
 
-[caches]
-
 [caches.images]
 dir = ':cacheDir/images'
-
-[markup]
 
 [markup.highlight]
 style = 'catppuccin-mocha'
