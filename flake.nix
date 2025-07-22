@@ -25,6 +25,7 @@
             (aspellWithDicts (ps: with ps; [ en ]))
             # keep-sorted start
             hugo
+            mask
             nushell
             # keep-sorted end
           ];
