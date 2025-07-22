@@ -7,7 +7,7 @@ theme = 'typo'
 dir = ':cacheDir/images'
 
 [markup.highlight]
-noClasses = false
+style = 'catppuccin-mocha'
 
 [params]
 # Meta description
