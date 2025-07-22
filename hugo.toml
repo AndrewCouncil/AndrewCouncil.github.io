@@ -6,3 +6,11 @@ theme = 'typo'
 [caches]
 [caches.images]
 dir = ':cacheDir/images'
+
+[params]
+colorPalette = 'catpuccin'
+
+
+[markup]
+[markup.highlight]
+style = 'catppuccin-mocha'
