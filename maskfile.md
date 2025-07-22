@@ -11,5 +11,5 @@ hugo server --buildDrafts --buildFuture
 > Start zellij session with server running
 
 ```bash
-zellij --layout layout_file.kdl
+zellij --layout layout_file.kdl attach --create personal-site
 ```
