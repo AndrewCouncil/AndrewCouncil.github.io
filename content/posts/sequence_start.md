@@ -29,19 +29,22 @@ print $"Total size: ($total_size)"
 ## Lists
 
 1. First
-2. Second
-3. etc.
+1. Second
+1. etc.
 
 - heyo
+
 - another one
 
 - [x] Write the press release
+
 - [ ] Update the website
+
 - [ ] Contact the media
 
 ## Table
 
-| Syntax      | Description |
+| Syntax | Description |
 | ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| Header | Title |
+| Paragraph | Text |
