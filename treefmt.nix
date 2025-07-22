@@ -6,7 +6,7 @@
 
   programs = {
     nixfmt.enable = true;
-    jsonfmt.enable = true;
+    prettier.enable = true;
     shellcheck.enable = true;
     gofmt.enable = true;
     ruff.enable = true;
