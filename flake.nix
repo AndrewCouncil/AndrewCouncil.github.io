@@ -28,6 +28,7 @@
             hugo
             mask
             nushell
+            zellij
             # keep-sorted end
           ];
         };
