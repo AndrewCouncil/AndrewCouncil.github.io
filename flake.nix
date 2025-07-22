@@ -24,6 +24,7 @@
           buildInputs = with pkgs; [
             (aspellWithDicts (ps: with ps; [ en ]))
             # keep-sorted start
+            go
             hugo
             mask
             nushell
