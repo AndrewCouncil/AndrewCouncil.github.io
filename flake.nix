@@ -37,6 +37,7 @@
           buildInputs = with pkgs; [
             (aspellWithDicts (ps: with ps; [ en ]))
             # keep-sorted start
+            dart-sass
             go
             mask
             myHugo
