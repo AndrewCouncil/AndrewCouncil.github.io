@@ -52,7 +52,7 @@ dump_file(post, file)
 import os
 import pypandoc
 from pathlib import Path
-from scripts.front_matter import load_file, dump_file
+from scripts.front_matter import load_file
 
 file = Path("content/resume/index.md")
 post = load_file(file)
