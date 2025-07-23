@@ -1,4 +1,7 @@
-# Résumé
++++
+draft = true
+title = 'Résumé'
++++
 
 **Software Engineer** specializing in embedded systems and infrastructure. Skilled in agile development, DevOps management, network infrastructure, Docker containerization, and AWS integration. Proven leadership in team coordination and technical education. Seeking Full-Stack Software Engineering positions.
 
