@@ -1,0 +1,26 @@
+{{ $scale := .Get "scale" | default "1" }}
+{{ $scalePercent := mul (float $scale) 100 }}
+
+<div style="display: flex !important; justify-content: center !important; align-items: center !important; margin: 1rem auto !important; width: 100% !important; text-align: center !important;">
+  <div style="display: inline-block !important; text-align: center !important;">
+    <img src="{{ .Get "src" }}" alt="{{ .Get "alt" | default "Image" }}"
+         {{ with .Get "width" }}width="{{ . }}"{{ end }}
+         {{ with .Get "height" }}height="{{ . }}"{{ end }}
+         {{ with .Get "class" }}class="{{ . }}"{{ end }}
+         style="
+         {{- if not (.Get "width") -}}
+           max-width: {{ $scalePercent }}% !important;
+         {{- else -}}
+           max-width: 100% !important;
+         {{- end -}}
+         height: auto !important;
+         display: block !important;
+         margin: 0 auto !important;
+         {{ .Get "style" }}" />
+    {{ with .Get "caption" }}
+    <div style="font-style: italic !important; color: #666 !important; margin-top: 0.5rem !important; font-size: 0.9rem !important; text-align: center !important;">
+      {{ . }}
+    </div>
+    {{ end }}
+  </div>
+</div>

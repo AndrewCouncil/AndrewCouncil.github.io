@@ -30,6 +30,8 @@ To handle my static site generation, I chose [Hugo](https://github.com/gohugoio/
 
 In all seriousness, I chose Hugo because I am very comfortable with Go, which Hugo is written in. This means that I know how to patch in features I want if needed.
 
-![Image alt](foreshadowing.webp)
+{{< center-image src="foreshadowing.webp" alt="Foreshadowing" scale="0.5" >}}
+
+test
 
 \[^1\]: This is likely a blog post incoming, as GitHub actions can be very messy at times. See [fasterthanlime's excellent overview of the mess we are in](https://www.youtube.com/watch?v=9qljpi5jiMQ).
