@@ -41,5 +41,10 @@ let stripped_resume = (
     to text
 )
 
-$stripped_resume | pandoc -f markdown -t pdf -o content/resume.pdf
+$stripped_resume | (
+    pandoc
+    -f markdown -t pdf
+    -V geometry:margin=0.5in
+    -o content/resume.pdf
+)
 ```
