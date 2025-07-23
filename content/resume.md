@@ -10,7 +10,7 @@ hidePagination = true
 
 **Software Engineer** specializing in embedded systems and infrastructure. Skilled in agile development, DevOps management, network infrastructure, Docker containerization, and AWS integration. Proven leadership in team coordination and technical education. Seeking Full-Stack Software Engineering positions.
 
-- [andrew.p.council@gmail.com](mailto:andrew.p.council@gmail.com)
+- [drew@drewcouncil.com](mailto:drew@drewcouncil.com)
 - [LinkedIn](https://www.linkedin.com/in/drew-council/)
 - [770‑833‑1759](tel:+17708331759)
 - New York City, NY
