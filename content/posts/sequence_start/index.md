@@ -16,7 +16,7 @@ In keeping with this theme, I figured I'd document the process of getting this s
 
 ## Hosting
 
-When starting this project, I was already pretty sure I would be using [GitHub Pages](https://pages.github.com/) to handle hosting the static site. It's free, and I'm already familiar with the GitHub Actions tooling, for better or (often) worse.[^1]
+When starting this project, I was already pretty sure I would be using [GitHub Pages](https://pages.github.com/) to handle hosting the static site. It's free, and I'm already familiar with the GitHub Actions tooling, for better or (often) worse.[^gha]
 
 It's free and everyone uses it, so the documentation for DNS setup, deployment, and integration with all the site generators is excellent. What's not to love? ☺️
 
@@ -32,6 +32,14 @@ In all seriousness, I chose Hugo because I am very comfortable with Go, which Hu
 
 {{< center-image src="foreshadowing.webp" alt="Foreshadowing" scale="0.5" >}}
 
-test
+Additionally, it is [available in nixpkgs](https://search.nixos.org/packages?channel=unstable&show=hugo), which means someone else has done the work of making it build nicely in the nix ecosystem for me.
 
-\[^1\]: This is likely a blog post incoming, as GitHub actions can be very messy at times. See [fasterthanlime's excellent overview of the mess we are in](https://www.youtube.com/watch?v=9qljpi5jiMQ).
+Ultimately, I'm pretty happy with this choice. The website builds super quickly (the `hugo server` command works exellently), and even if I need to recompile Hugo from source, it only takes a couple of minutes at most on my old laptop.
+
+### Theme
+
+I ended up settling on [typo](https://tomfran.github.io/typo-wiki/features/homepage/), which I find to be pretty stylish. I really like the structure of the default layout. Also, I'm a real sucker for [catppuccin](https://catppuccin.com/),[^catppuccin] and typo has included it as a theme option.
+
+[^gha]: This is likely a blog post incoming, as GitHub actions can be very messy at times. See [fasterthanlime's excellent overview of the mess we are in](https://www.youtube.com/watch?v=9qljpi5jiMQ).
+
+[^catppuccin]: Don't beleive me? Check out [my NixOS configuration](https://github.com/AndrewCouncil/nixconf). It uses the excellent [catppuccin-nix](https://github.com/catppuccin/nix) to theme all my applications automagically.
