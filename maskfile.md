@@ -31,21 +31,37 @@ hyprctl dispatch exec "chromium-browser http://localhost:1313/"
 
 > Update the date in the header of the site
 
-```bash
-uv run scripts/front_matter.py update-date $file
+```python
+import os
+from datetime import datetime
+from pathlib import Path
+from scripts.front_matter import load_file, dump_file
+
+file = Path(os.getenv("file", "."))
+
+post = load_file(file)
+post["date"] = datetime.now().strftime("%Y-%m-%dT%H:%M:%S%z")
+dump_file(post, file)
 ```
 
 ## resume
 
 > Use pandoc to make a PDF of the resume doc
 
-```nu
-let stripped_resume = uv run scripts/front_matter.py body content/resume.md -s 2
+```python
+import os
+import pypandoc
+from pathlib import Path
+from scripts.front_matter import load_file, dump_file
 
-$stripped_resume | (
-    pandoc
-    -f markdown -t pdf
-    -V geometry:margin=0.5in
-    -o content/resume.pdf
+file = Path("content/resume/index.md")
+post = load_file(file)
+content = "\n".join(post.content.splitlines()[2:])
+
+pypandoc.convert_text(
+    source=content,
+    format="md",
+    to="pdf",
+    outputfile=file.parent / "resume.pdf"
 )
 ```
