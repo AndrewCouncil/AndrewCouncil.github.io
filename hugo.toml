@@ -17,10 +17,16 @@ theme = "dark"
 colorPalette = "catpuccin"
 hideHeader = false
 # Intro on main page, content is markdown
-homeIntroTitle = "Hi!"
 homeIntroContent = """
-### Hello
-test 123
+Hi! I'm Drew, also known as [@bizmyth](/about).
+
+I'm an NYC-based software engineer working at [Dirac, Inc](https://www.diracinc.com/).
+
+I love **backend and infrastructure**. I program a lot in **Go, Python, and C/C++**.
+
+I'm also a big fan of **Nix and NixOS**. Check out [my NixOS config](https://github.com/AndrewCouncil/nixconf)!
+
+I occassionally write about technologies and topics that interest me here.
 """
 # Collection to display on home
 homeCollectionTitle = "Posts"
@@ -62,11 +68,11 @@ url = "/about"
 # Social icons
 [[params.social]]
 name = "linkedin"
-url = "https://www.linkedin.com/in/user/"
+url = "https://www.linkedin.com/in/drew-council/"
 
 [[params.social]]
 name = "github"
-url = "https://github.com/user"
+url = "https://github.com/AndrewCouncil"
 
 [taxonomies]
 tag = "tags"
