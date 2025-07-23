@@ -30,20 +30,32 @@
           doCheck = false;
         });
 
+        maskWrapped = pkgs.writeShellApplication {
+          name = "mask";
+          runtimeInputs = [
+            pkgs.uv
+            pkgs.mask
+          ];
+          text = ''
+            uv run mask "$@"
+          '';
+        };
+
         treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
       in
       {
         devShells.default = pkgs.mkShell {
-          buildInputs = with pkgs; [
+          packages = with pkgs; [
             (aspellWithDicts (ps: with ps; [ en ]))
             # keep-sorted start
             dart-sass
             go
-            mask
+            maskWrapped
             myHugo
             nushell
             pandoc
             texlive.combined.scheme-small
+            uv
             zellij
             # keep-sorted end
           ];
