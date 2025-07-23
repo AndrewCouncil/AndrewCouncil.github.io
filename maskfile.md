@@ -27,17 +27,20 @@ zellij --layout layout_file.kdl attach --create $session
 hyprctl dispatch exec "chromium-browser http://localhost:1313/"
 ```
 
+## update-date (file)
+
+> Update the date in the header of the site
+
+```bash
+uv run scripts/front_matter.py update-date $file
+```
+
 ## resume
 
 > Use pandoc to make a PDF of the resume doc
 
 ```nu
-let stripped_resume = (
-    open --raw content/resume.md |
-    lines |
-    skip until {|line| $line == "# Drew Council"} |
-    to text
-)
+let stripped_resume = uv run scripts/front_matter.py body content/resume.md -s 2
 
 $stripped_resume | (
     pandoc
