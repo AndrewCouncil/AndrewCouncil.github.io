@@ -17,7 +17,7 @@ style = "catppuccin-mocha"
 description = ""
 # Appearance settings
 theme = "dark"
-colorPalette = "catpuccin"
+colorPalette = "catpuccin-dark"
 hideHeader = false
 # Intro on main page, content is markdown
 homeIntroContent = """
