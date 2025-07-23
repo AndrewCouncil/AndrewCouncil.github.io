@@ -21,8 +21,25 @@ zellij --layout layout_file.kdl attach --create $session
 
 ## open
 
-> Open the local site in a chromium PWA-style window.
+> Open the local site in chromium
 
 ```bash
 hyprctl dispatch exec "chromium-browser http://localhost:1313/"
+```
+
+## resume
+
+> Use pandoc to make a PDF of the resume doc
+
+```nu
+let stripped_resume = (
+    open --raw content/resume.md |
+    lines |
+    skip 1 |
+    skip until {|line| $line == "+++"} |
+    skip 1 |
+    to text
+)
+
+$stripped_resume | pandoc -f markdown -t pdf -o content/resume.pdf
 ```
