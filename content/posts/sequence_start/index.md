@@ -32,7 +32,7 @@ To handle my static site generation, I chose [Hugo](https://github.com/gohugoio/
 
 In all seriousness, I chose Hugo because I am very comfortable with Go, which Hugo is written in. This means that I know how to patch in features I want if needed.
 
-{{< center-image src="foreshadowing.webp" alt="Foreshadowing" scale="0.75" >}}
+![foreshadowing](images/foreshadowing.webp#small)
 
 Additionally, it is [available in nixpkgs](https://search.nixos.org/packages?channel=unstable&show=hugo), which means someone else has done the work of making it build nicely in the nix ecosystem for me.
 
@@ -40,16 +40,28 @@ Ultimately, I'm pretty happy with this choice. The website builds super quickly 
 
 ### theme
 
-I ended up settling on [typo](https://tomfran.github.io/typo-wiki/features/homepage/), which I find to be pretty stylish. I really like the structure of the default layout. Also, I'm a real sucker for [catppuccin](https://catppuccin.com/),[^catppuccin] and typo has included it as a theme option.
+I ended up settling on [typo](https://tomfran.github.io/typo-wiki/features/homepage/), which I find to be pretty stylish. I really like the structure of the default layout.
 
-The only change I made from the default behavior is changing the monospace/code font to [`JetBrains Mono`](https://www.jetbrains.com/lp/mono/). It was my favorite part of JetBrains when I used it in school, and I use it practially everywhere.
+The only change I made from the default behavior is changing the monospace/code font to [`JetBrains Mono`](https://www.jetbrains.com/lp/mono/). It was my favorite part of JetBrains when I used it in school, and I use it practially everywhere. I also added a slightly tweaked version of the included [catppuccin theme](https://catppuccin.com/)
 
 ---
 
 Great! I have my website set up and deploying nicely using the [Hugo docs for working with GitHub Pages](https://gohugo.io/host-and-deploy/host-on-github-pages/). It should be smooth sailing from here...
 
-# an issue
+# one tiny issue
+
+Syntax highlighting isn't working for [`nu`](https://www.nushell.sh/)...
+
+```
+ls ~/Documents
+```
+
+<figcaption>dang it.</figcaption>
+
+Well, let me see if I can figure out why that is.
+
+![rabbithole](images/looney-tunes-swim-in-rabbit-hole.gif#small)
+
+TODO
 
 [^gha]: This is likely a blog post incoming, as GitHub actions can be very messy at times. See [fasterthanlime's excellent overview of the mess we are in](https://www.youtube.com/watch?v=9qljpi5jiMQ).
-
-[^catppuccin]: Don't beleive me? Check out [my NixOS configuration](https://github.com/AndrewCouncil/nixconf). It uses the excellent [catppuccin-nix](https://github.com/catppuccin/nix) to theme all my applications automagically.
