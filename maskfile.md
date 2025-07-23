@@ -62,6 +62,7 @@ pypandoc.convert_text(
     source=content,
     format="md",
     to="pdf",
-    outputfile=file.parent / "resume.pdf"
+    outputfile=file.parent / "resume.pdf",
+    extra_args=["-V", "geometry:margin=0.5in"],
 )
 ```
