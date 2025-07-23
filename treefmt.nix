@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }:
 {
@@ -14,10 +15,19 @@
     toml-sort.enable = true;
     dos2unix.enable = true;
     keep-sorted.enable = true;
-    mdformat.enable = true;
     kdlfmt.enable = true;
     # buggy as of right now
     # nufmt.enable = true;
+    mdformat = {
+      enable = true;
+      # github-style markdown formatting support
+      package = pkgs.mdformat.withPlugins (ps: [
+        ps.mdformat-gfm
+        ps.mdformat-frontmatter
+        ps.mdformat-footnote # footnotes break othewise
+        ps.mdformat-gfm-alerts
+      ]);
+    };
   };
 
   settings = {
