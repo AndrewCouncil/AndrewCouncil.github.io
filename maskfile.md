@@ -24,5 +24,5 @@ zellij --layout layout_file.kdl attach --create $session
 > Open the local site in a chromium PWA-style window.
 
 ```bash
-hyprctl dispatch exec "chromium-browser --app=http://localhost:1313/"
+hyprctl dispatch exec "chromium-browser http://localhost:1313/"
 ```
