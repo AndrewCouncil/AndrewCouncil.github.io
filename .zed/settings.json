@@ -4,6 +4,9 @@
   "languages": {
     "Nu": {
       "tab_size": 4
+    },
+    "Python": {
+      "tab_size": 4
     }
   }
 }
