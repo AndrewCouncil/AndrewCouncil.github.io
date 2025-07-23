@@ -5,6 +5,7 @@ title = 'sequence start'
 +++
 
 {{< spotify type="track" id="2Kg42rmivHQggcXxvAoeyX" width="100%" height="200" >}}
+
 **My first post!** I've been meaning to set up a little personal blog for a while, and I have finally had the time to do it.
 
 My primary motivation is to have a better option that GitHub Gists to pass around guides and resources. However, I'm hoping this will also be a good place for me to share what I'm up to regarding my personal projects and discuss new technologies I come accross.

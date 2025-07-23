@@ -4,7 +4,7 @@ title = 'résumé'
 hidePagination = true
 +++
 
-[**PDF Version**](/resume.pdf)
+[**PDF Version**](resume.pdf)
 
 # Drew Council
 
