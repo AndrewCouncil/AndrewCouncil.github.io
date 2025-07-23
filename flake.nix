@@ -23,10 +23,10 @@
           src = pkgs.fetchFromGitHub {
             owner = "AndrewCouncil";
             repo = "hugo";
-            rev = "9002fe9bc52b3f8528dfb5b9caeea0b88d64c03b";
-            hash = "sha256-6YAHonrW67ogSBdkyboBUYtkOeFov1qUFJImWOXhHtg=";
+            rev = "89ab889d76e05b0b681368f6900597f92733df7c";
+            hash = "sha256-I7FN2fLWfGbOzUxN/+25P9Cg8AQAhyr8616nfWupCR0=";
           };
-          vendorHash = "sha256-z8+WJfMS0Z89NeqIOvYWfKQHzfqv7vFuiiE3d4eodFE=";
+          vendorHash = "sha256-aLlFDP6kuhRphLbkM52V8zsNpDSa0ef29fPmE9FPdDE=";
           doCheck = false;
         });
 
