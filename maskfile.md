@@ -18,3 +18,11 @@ zellij kill-session $session || true
 zellij delete-session $session || true
 zellij --layout layout_file.kdl attach --create $session
 ```
+
+## open
+
+> Open the local site in a chromium PWA-style window.
+
+```bash
+hyprctl dispatch exec "chromium-browser --app=http://localhost:1313/"
+```
