@@ -1,34 +1,34 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'Drew Council'
-theme = 'typo'
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "Drew Council"
+theme = "typo"
 
 [caches.images]
-dir = ':cacheDir/images'
+dir = ":cacheDir/images"
 
 [markup.highlight]
-style = 'catppuccin-mocha'
+style = "catppuccin-mocha"
 
 [params]
 # Meta description
-description = "A Tech Blog"
+description = ""
 # Appearance settings
-theme = 'auto'
-colorPalette = 'catpuccin'
+theme = "dark"
+colorPalette = "catpuccin"
 hideHeader = false
 # Intro on main page, content is markdown
-homeIntroTitle = 'Hi!'
+homeIntroTitle = "Hi!"
 homeIntroContent = """
 ### Hello
 test 123
 """
 # Collection to display on home
-homeCollectionTitle = 'Posts'
-homeCollection = 'posts'
+homeCollectionTitle = "Posts"
+homeCollection = "posts"
 # Lists parameters
 paginationSize = 100
 listSummaries = true
-listDateFormat = 'Jan 2 2006'
+listDateFormat = "Jan 2 2006"
 
 # Breadcrumbs
 [params.breadcrumbs]
@@ -69,4 +69,4 @@ name = "github"
 url = "https://github.com/user"
 
 [taxonomies]
-tag = 'tags'
+tag = "tags"
