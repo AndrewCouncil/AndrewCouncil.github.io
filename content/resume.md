@@ -13,9 +13,9 @@ hidePagination = true
 
 ---
 
-## Core Skills
+## Skills
 
-Linux · C++ · C · Python · Rust · JavaScript · Docker · Git · Bash · GDB · Debian/Ubuntu · RHEL · AWS · Arduino · Raspberry Pi · Yocto Linux · ROS2 · Verilog · PlatformIO · Multithreading · Performance Analysis · Code Reviews · Unit Testing · Version Control Systems · Coding Standards · JIRA · Fault Tolerance · System Design · Scrum · Confluence
+Go · Python · C++ · C · Linux · Nix/NixOS · Docker · Git · Bash · GDB · Debian/Ubuntu · RHEL · AWS · Arduino · Raspberry Pi · Yocto Linux · ROS2 · Verilog · PlatformIO
 
 ---
 
