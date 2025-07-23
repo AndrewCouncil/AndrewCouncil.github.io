@@ -1,6 +1,3 @@
-[submodule "themes/PaperModX"]
-	path = themes/PaperModX
-	url = git@github.com:AndrewCouncil/hugo-PaperModX.git
 [submodule "themes/typo"]
 	path = themes/typo
 	url = git@github.com:tomfran/typo.git
