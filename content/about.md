@@ -1,6 +1,6 @@
 +++
 draft = false
-title = 'About Me'
+title = 'about me'
 hidePagination = true # dont show ←Résumé link at bottom
 +++
 
@@ -16,4 +16,4 @@ I occassionally write about technologies and topics that interest me here.
 
 ---
 
-## [Résumé](/resume)
+## [résumé](/resume)

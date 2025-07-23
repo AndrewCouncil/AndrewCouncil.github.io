@@ -1,6 +1,6 @@
 +++
 draft = false
-title = 'Résumé'
+title = 'résumé'
 hidePagination = true
 +++
 
