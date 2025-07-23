@@ -35,9 +35,7 @@ hyprctl dispatch exec "chromium-browser http://localhost:1313/"
 let stripped_resume = (
     open --raw content/resume.md |
     lines |
-    skip 1 |
-    skip until {|line| $line == "+++"} |
-    skip 1 |
+    skip until {|line| $line == "# Drew Council"} |
     to text
 )
 

@@ -16,4 +16,4 @@ I occassionally write about technologies and topics that interest me here.
 
 ---
 
-## [Résumé](/resume/resume)
+## [Résumé](/resume)

@@ -4,6 +4,8 @@ title = 'Résumé'
 hidePagination = true
 +++
 
+[**PDF Version**](/resume.pdf)
+
 # Drew Council
 
 **Software Engineer** specializing in embedded systems and infrastructure. Skilled in agile development, DevOps management, network infrastructure, Docker containerization, and AWS integration. Proven leadership in team coordination and technical education. Seeking Full-Stack Software Engineering positions.
@@ -12,10 +14,6 @@ hidePagination = true
 - [LinkedIn](https://www.linkedin.com/in/drew-council/)
 - [770‑833‑1759](tel:+17708331759)
 - New York City, NY
-
-## Skills
-
-Go · Python · C++ · C · Linux · Nix/NixOS · Docker · Git · Bash · GDB · Debian/Ubuntu · RHEL · AWS · Arduino · Raspberry Pi · Yocto Linux · ROS2 · Verilog · PlatformIO
 
 ## Work Experience
 
@@ -62,6 +60,10 @@ Go · Python · C++ · C · Linux · Nix/NixOS · Docker · Git · Bash · GDB �
 - Added kernel threads with system calls and context switching to xv6 (in C).
 - Introduced copy‑on‑write fork to optimize memory usage.
 - Utilized GDB and Valgrind for debugging and testing OS features.
+
+## Skills
+
+Go · Python · C++ · C · Linux · Nix/NixOS · Docker · Git · Bash · GDB · Debian/Ubuntu · RHEL · AWS · Arduino · Raspberry Pi · Yocto Linux · ROS2 · Verilog · PlatformIO
 
 ## Education
 
