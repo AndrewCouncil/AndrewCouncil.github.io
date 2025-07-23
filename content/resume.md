@@ -4,6 +4,8 @@ title = 'Résumé'
 hidePagination = true
 +++
 
+# Drew Council
+
 **Software Engineer** specializing in embedded systems and infrastructure. Skilled in agile development, DevOps management, network infrastructure, Docker containerization, and AWS integration. Proven leadership in team coordination and technical education. Seeking Full-Stack Software Engineering positions.
 
 - [andrew.p.council@gmail.com](mailto:andrew.p.council@gmail.com)
@@ -11,13 +13,9 @@ hidePagination = true
 - [770‑833‑1759](tel:+17708331759)
 - New York City, NY
 
----
-
 ## Skills
 
 Go · Python · C++ · C · Linux · Nix/NixOS · Docker · Git · Bash · GDB · Debian/Ubuntu · RHEL · AWS · Arduino · Raspberry Pi · Yocto Linux · ROS2 · Verilog · PlatformIO
-
----
 
 ## Work Experience
 
@@ -48,8 +46,6 @@ Go · Python · C++ · C · Linux · Nix/NixOS · Docker · Git · Bash · GDB �
 - Implemented PID control, sensor fusion, computer vision, and SMACH to enhance autonomy.
 - Placed 1st in Propulsion System & Technical Report (2021, 2022); 3rd in Sensor Optimization (2021).
 
----
-
 ## Projects
 
 ### NixOS Developer Configuration — _Jan 2025–Present_
@@ -66,8 +62,6 @@ Go · Python · C++ · C · Linux · Nix/NixOS · Docker · Git · Bash · GDB �
 - Added kernel threads with system calls and context switching to xv6 (in C).
 - Introduced copy‑on‑write fork to optimize memory usage.
 - Utilized GDB and Valgrind for debugging and testing OS features.
-
----
 
 ## Education
 
