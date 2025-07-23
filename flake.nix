@@ -43,6 +43,7 @@
             myHugo
             nushell
             pandoc
+            texlive.combined.scheme-small
             zellij
             # keep-sorted end
           ];
