@@ -42,6 +42,7 @@
             mask
             myHugo
             nushell
+            pandoc
             zellij
             # keep-sorted end
           ];
