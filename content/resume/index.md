@@ -46,16 +46,16 @@ hidePagination = true
 
 ## Projects
 
-### NixOS Developer Configuration — _Jan 2025–Present_
+**NixOS Developer Configuration** — _Jan 2025–Present_
 
 - Created extensible system configuration for developer workloads based on NixOS
 
-### FPGA Typeracer‑style Arcade Game — _Sep 2022–Dec 2022_
+**FPGA Typeracer‑style Arcade Game** — _Sep 2022–Dec 2022_
 
 - Implemented a MIPS‑like pipelined processor in Verilog for serial input & VGA output.
 - Built a two‑player typing arcade game with custom display and keyboard drivers on FPGA.
 
-### xv6 UNIX Additions — _Sep 2022–Dec 2022_
+**xv6 UNIX Additions** — _Sep 2022–Dec 2022_
 
 - Added kernel threads with system calls and context switching to xv6 (in C).
 - Introduced copy‑on‑write fork to optimize memory usage.
