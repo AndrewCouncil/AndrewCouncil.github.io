@@ -1,8 +1,10 @@
 +++
 date = '2025-07-22T09:44:48-04:00'
-draft = false
+draft = true
 title = 'Sequence Start'
 +++
+
+{{< spotify type="track" id="2Kg42rmivHQggcXxvAoeyX" width="100%" height="200" >}}
 
 This is my first post. I am primarily testing out the look and feel of the blog and all the elements. 🥳
 
