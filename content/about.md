@@ -1,6 +1,7 @@
 +++
 draft = false
 title = 'About Me'
+hidePagination = true # dont show ←Résumé link at bottom
 +++
 
 Hi! I'm Drew, also known as [@bizmyth](/about).
