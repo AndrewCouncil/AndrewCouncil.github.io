@@ -24,6 +24,7 @@
     # files to exlude from all formatting
     excludes = [
       "themes/*"
+      "layouts/shortcodes/*"
     ];
     formatter = {
       # formatter-specific settings
