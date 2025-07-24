@@ -11,5 +11,3 @@ title = 'sequence start'
 My primary motivation is to have a better option than GitHub Gists to pass around guides and resources. However, I'm hoping this will also be a good place for me to share what I'm up to regarding my personal projects and discuss new technologies I come across.
 
 In keeping with this theme, I figured I'd document the process of getting this site operational.
-
--
