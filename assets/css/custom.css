@@ -57,4 +57,7 @@ pre + figcaption,
   text-align: left;
 }
 
-/* Center figcaptions by default */
+/* Make post summary text 2pt bigger */
+.line-summary {
+  font-size: 0.85em;
+}
