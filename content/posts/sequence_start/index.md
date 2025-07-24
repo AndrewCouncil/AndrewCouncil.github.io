@@ -8,7 +8,7 @@ title = 'sequence start'
 
 **My first post!** I've been meaning to set up a little personal blog for a while, and I have finally had the time to do it.
 
-My primary motivation is to have a better option that GitHub Gists to pass around guides and resources. However, I'm hoping this will also be a good place for me to share what I'm up to regarding my personal projects and discuss new technologies I come accross.
+My primary motivation is to have a better option than GitHub Gists to pass around guides and resources. However, I'm hoping this will also be a good place for me to share what I'm up to regarding my personal projects and discuss new technologies I come across.
 
 In keeping with this theme, I figured I'd document the process of getting this site operational.
 
@@ -38,13 +38,13 @@ In all seriousness, I chose Hugo because I am very comfortable with Go and its t
 
 Additionally, it is [available in nixpkgs](https://search.nixos.org/packages?channel=unstable&show=hugo), which means someone else has done the work of making it build nicely in the nix ecosystem for me.
 
-Ultimately, I'm pretty happy with this choice. The website builds super quickly (the `hugo server` command works exellently), and even if I need to recompile Hugo from source, it only takes a couple of minutes at most on my old laptop.
+Ultimately, I'm pretty happy with this choice. The website builds super quickly (the `hugo server` command works excellently), and even if I need to recompile Hugo from source, it only takes a couple of minutes at most on my old laptop.
 
 ### theme
 
 I ended up settling on [typo](https://tomfran.github.io/typo-wiki/features/homepage/), which I find to be pretty stylish. I really like the structure of the default layout.
 
-The only change I made from the default behavior is changing the monospace/code font to [`JetBrains Mono`](https://www.jetbrains.com/lp/mono/). It was my favorite part of JetBrains when I used it in school, and I use it practially everywhere. I also added a slightly tweaked version of the included [catppuccin theme](https://catppuccin.com/)
+The only change I made from the default behavior is changing the monospace/code font to [`JetBrains Mono`](https://www.jetbrains.com/lp/mono/). It was my favorite part of JetBrains when I used it in school, and I use it practically everywhere. I also added a slightly tweaked version of the included [catppuccin theme](https://catppuccin.com/)
 
 ---
 
@@ -68,7 +68,7 @@ Well, let me see if I can figure out why that is.
 
 Turns out, Hugo uses [chroma](https://github.com/alecthomas/chroma) to do syntax highlighting. Any language with a chroma _lexer_ is automatically supported in Hugo, but chroma does not have any Nu/Nushell support to speak of.
 
-That's ok, chroma is effectively a port of the patterns from the Python package [pygments](https://pygments.org/) and includes some helpful scripting to convert a pygment lexer to a chroma lexer. Pygments has no official nushell lexer, but there is the [pygments-nushell](https://pypi.org/project/pygments-nushell) package for just that purpose.
+That's fine, chroma is effectively a port of the patterns from the Python package [pygments](https://pygments.org/) and includes some helpful scripting to convert a pygments lexer to a chroma lexer. Pygments has no official nushell lexer, but there is the [pygments-nushell](https://pypi.org/project/pygments-nushell) package for just that purpose.
 
 So, I apply the script to the package and get a chroma `nu.xml` file defining the lexer patterns. Then, I manually patch it a bit to fix issues with syntax highlighting for `$var` patterns and [upstream the final product](https://github.com/alecthomas/chroma/pull/1110).
 
@@ -158,6 +158,6 @@ No.
 
 [^gha]: This is likely an incoming blog, as GitHub actions can be very messy at times. See [fasterthanlime's excellent overview of the mess we are in](https://www.youtube.com/watch?v=9qljpi5jiMQ).
 
-[^cachix]: In all honesty, this addition was mostly an excuse for me to try out Cachix in a real usecase. Overall, I have found it very plesant to use.
+[^cachix]: In all honesty, this addition was mostly an excuse for me to try out Cachix in a real use case. Overall, I have found it very pleasant to use.
 
 [^nu]: I do plan on blogging about nushell in the future, so I guess it isn't fully useless.
