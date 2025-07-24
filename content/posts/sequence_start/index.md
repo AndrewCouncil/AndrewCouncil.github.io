@@ -62,6 +62,16 @@ Well, let me see if I can figure out why that is.
 
 ![rabbithole](images/looney-tunes-swim-in-rabbit-hole.gif#small)
 
-TODO
+## down the rabbit hole
+
+Turns out, Hugo uses [chroma](https://github.com/alecthomas/chroma) to do syntax highlighting. Any language with syntax highlighting support is automatically supported in Hugo, but chroma does not have any Nu/Nushell support to speak of.
+
+That's ok, chroma is effectively a port of the patterns from the Python package [pygments](https://pygments.org/) and includes some helpful scripting to convert a pygment lexer to a chroma lexer. Pygments has no official nushell lexer, but there is the [pygments-nushell](https://pypi.org/project/pygments-nushell) package for just that purpose.
+
+So, I apply the script to the package and get a chroma `nu.xml` file defining the lexer patterns. Then, I manually patch it a bit to fix issues with syntax highlighting for `$var` patterns and [upstream the final product](https://github.com/alecthomas/chroma/pull/1110).
+
+## getting the fix into hugo
+
+To add this syntax highlighting to Hugo, I needed to [fork Hugo]()
 
 [^gha]: This is likely a blog post incoming, as GitHub actions can be very messy at times. See [fasterthanlime's excellent overview of the mess we are in](https://www.youtube.com/watch?v=9qljpi5jiMQ).
