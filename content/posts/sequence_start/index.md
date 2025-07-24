@@ -26,13 +26,15 @@ It's free and everyone uses it, so the documentation for DNS setup, deployment, 
 
 To handle my static site generation, I chose [Hugo](https://github.com/gohugoio/hugo).
 
+![hugo](images/hugo-logo-wide.svg#small)
+
 ### why not xyz other framework?
 
 > I'm scared of javascript.
 
 In all seriousness, I chose Hugo because I am very comfortable with Go, which Hugo is written in. This means that I know how to patch in features I want if needed.
 
-![foreshadowing](images/foreshadowing.webp#small)
+![foreshadowing](images/foreshadowing.webp#medium)
 
 Additionally, it is [available in nixpkgs](https://search.nixos.org/packages?channel=unstable&show=hugo), which means someone else has done the work of making it build nicely in the nix ecosystem for me.
 
