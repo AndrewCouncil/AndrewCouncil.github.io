@@ -5,19 +5,21 @@ title = "creating this website"
 
 +++
 
-# hosting
+I wanted to document the creation of this website. It's nicely meta, and I had some interesting challeneges come up in setting it up and syling it just how I preferred.
+
+## github pages
 
 When starting this project, I was already pretty sure I would be using [GitHub Pages](https://pages.github.com/) to handle hosting the static site. It's free, and I'm already familiar with the GitHub Actions tooling, for better or (often) worse.[^gha]
 
 It's free and everyone uses it, so the documentation for DNS setup, deployment, and integration with all the site generators is excellent. _What's not to love?_ ☺️
 
-# hugo
+## hugo
 
 To handle my static site generation, I chose [**Hugo**](https://github.com/gohugoio/hugo).
 
 [![hugo](images/hugo-logo-wide.svg#small)](https://github.com/gohugoio/hugo)
 
-## why not xyz other framework?
+### why not xyz other framework?
 
 > I'm scared of javascript.
 
@@ -29,7 +31,7 @@ Additionally, it is [available in nixpkgs](https://search.nixos.org/packages?cha
 
 Ultimately, I'm pretty happy with this choice. The website builds super quickly (the `hugo server` command works excellently), and even if I need to recompile Hugo from source, it only takes a couple of minutes at most on my old laptop.
 
-## theme
+### theme
 
 I ended up settling on [typo](https://tomfran.github.io/typo-wiki/features/homepage/), which I find to be pretty stylish. I really like the structure of the default layout.
 
@@ -61,11 +63,11 @@ That's fine, chroma is effectively a port of the patterns from the Python packag
 
 So, I apply the script to the package and get a chroma `nu.xml` file defining the lexer patterns. Then, I manually patch it a bit to fix issues with syntax highlighting for `$var` patterns and [upstream the final product](https://github.com/alecthomas/chroma/pull/1110).
 
-## getting the fix into hugo
+## compiling the fix into hugo
 
 To add this syntax highlighting to Hugo, I needed to [fork Hugo](https://github.com/bizmythy/hugo) and use `go get -u github.com/alecthomas/chroma/v2@master` to pull in the latest chroma changes.
 
-Then, I want to build this fork of Hugo for my project. I'm using **Nix Flakes** to define my development environment in a [`flake.nix` file](https://github.com/bizmythy/bizmythy.github.io/blob/main/flake.nix), and this allows me to define a new source for Hugo fairly easily:
+Then, I want to build this fork of Hugo for my project. I'm using **Nix Flakes** to define my development environment in a [`flake.nix` file](https://github.com/bizmythy/bizmythy.github.io/blob/main/flake.nix), and this allows me to define a new source for `pkgs.hugo`:
 
 ```nix
 myHugo = pkgs.hugo.overrideAttrs (old: {
@@ -77,7 +79,7 @@ myHugo = pkgs.hugo.overrideAttrs (old: {
     hash = "<hash>";
   };
   vendorHash = "<vendor hash>";
-  doCheck = false;
+  doCheck = false; # speeds up build times, fine for personal use
 });
 ```
 
