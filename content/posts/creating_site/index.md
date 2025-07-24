@@ -1,34 +1,23 @@
 +++
-date = '2025-07-22T09:44:48-04:00'
+date = "2025-07-24T00:49:45"
 draft = false
-title = 'sequence start'
+title = "creating this website"
+
 +++
 
-{{< spotify type="track" id="2Kg42rmivHQggcXxvAoeyX" width="100%" height="200" >}}
-
-**My first post!** I've been meaning to set up a little personal blog for a while, and I have finally had the time to do it.
-
-My primary motivation is to have a better option than GitHub Gists to pass around guides and resources. However, I'm hoping this will also be a good place for me to share what I'm up to regarding my personal projects and discuss new technologies I come across.
-
-In keeping with this theme, I figured I'd document the process of getting this site operational.
-
----
-
-# creating this website
-
-## hosting
+# hosting
 
 When starting this project, I was already pretty sure I would be using [GitHub Pages](https://pages.github.com/) to handle hosting the static site. It's free, and I'm already familiar with the GitHub Actions tooling, for better or (often) worse.[^gha]
 
 It's free and everyone uses it, so the documentation for DNS setup, deployment, and integration with all the site generators is excellent. _What's not to love?_ ☺️
 
-## hugo
+# hugo
 
 To handle my static site generation, I chose [**Hugo**](https://github.com/gohugoio/hugo).
 
 [![hugo](images/hugo-logo-wide.svg#small)](https://github.com/gohugoio/hugo)
 
-### why not xyz other framework?
+## why not xyz other framework?
 
 > I'm scared of javascript.
 
@@ -40,7 +29,7 @@ Additionally, it is [available in nixpkgs](https://search.nixos.org/packages?cha
 
 Ultimately, I'm pretty happy with this choice. The website builds super quickly (the `hugo server` command works excellently), and even if I need to recompile Hugo from source, it only takes a couple of minutes at most on my old laptop.
 
-### theme
+## theme
 
 I ended up settling on [typo](https://tomfran.github.io/typo-wiki/features/homepage/), which I find to be pretty stylish. I really like the structure of the default layout.
 
