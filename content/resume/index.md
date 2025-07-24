@@ -46,11 +46,11 @@ hidePagination = true
 
 ## Projects
 
-**NixOS Developer Configuration** — _Jan 2025–Present_
+[**NixOS Developer Configuration**](https://github.com/bizmythy/nixconf) — _Jan 2025–Present_
 
 - Created extensible system configuration for developer workloads based on NixOS
 
-**FPGA Typeracer‑style Arcade Game** — _Sep 2022–Dec 2022_
+[**FPGA Typeracer‑style Arcade Game**](https://github.com/bizmythy/typeracer-FPGA) — _Sep 2022–Dec 2022_
 
 - Implemented a MIPS‑like pipelined processor in Verilog for serial input & VGA output.
 - Built a two‑player typing arcade game with custom display and keyboard drivers on FPGA.
