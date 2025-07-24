@@ -48,3 +48,16 @@ td code {
 pre {
   font-weight: 400;
 }
+
+/* Reduce spacing between code blocks and following figcaptions */
+pre + figcaption {
+  margin-top: -1.5rem;
+  margin-bottom: +2rem;
+  text-align: left;
+}
+
+/* Center figcaptions by default */
+figcaption {
+  margin-top: -0.5rem;
+  text-align: center;
+}
