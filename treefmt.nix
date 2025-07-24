@@ -34,7 +34,7 @@
     # files to exlude from all formatting
     excludes = [
       "themes/*"
-      "layouts/shortcodes/*"
+      "*.html"
     ];
     formatter = {
       # formatter-specific settings
