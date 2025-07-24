@@ -1,0 +1,43 @@
+<div class="post-line">
+
+    {{ $dateFormat := .Site.Params.listDateFormat | default "2 Jan 2006" }}
+
+    {{ if .Parent.Param "showListDate" | default true }}
+        <p class="line-date">{{ .Date | time.Format $dateFormat }} </p>
+    {{ end }}
+
+    <div>
+        <p class="line-title">
+            <a href="{{ .RelPermalink }}">
+                {{ .Title }}
+            </a>
+        </p>
+
+        {{ if .Site.Params.listSummaries }}
+        <p class="line-summary">
+            {{ $content := .Content }}
+            {{ $firstParagraph := "" }}
+
+            {{/* Split content by paragraphs and get the first non-empty one */}}
+            {{ $paragraphs := split $content "</p>" }}
+            {{ range $paragraphs }}
+                {{ $paragraph := . }}
+                {{ if and (not $firstParagraph) (gt (len (trim (plainify $paragraph) " \n\r\t")) 0) }}
+                    {{ $firstParagraph = $paragraph }}
+                {{ end }}
+            {{ end }}
+
+            {{/* If we found a paragraph, clean it up and display it */}}
+            {{ if $firstParagraph }}
+                {{ $cleanParagraph := replaceRE "<p[^>]*>" "" $firstParagraph }}
+                {{ $cleanParagraph = replaceRE "<[^>]+>" "" $cleanParagraph }}
+                {{ $cleanParagraph = replaceRE "\\{\\{<[^>]+>\\}\\}" "" $cleanParagraph }}
+                {{ trim $cleanParagraph " \n\r\t" | markdownify }}
+            {{ else }}
+                {{/* Fallback to regular summary if no paragraph found */}}
+                {{ .Summary }}
+            {{ end }}
+        </p>
+        {{ end }}
+    </div>
+</div>
