@@ -72,7 +72,6 @@ pypandoc.convert_text(
 > Create a new post with correct structure
 
 ```bash
-mkdir -p content/posts/$name
 hugo new content content/posts/$name/index.md \
   --editor zeditor
 ```
