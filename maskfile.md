@@ -74,4 +74,5 @@ pypandoc.convert_text(
 ```bash
 hugo new content content/posts/$name/index.md \
   --editor zeditor
+# TODO: add sed for title replace
 ```
