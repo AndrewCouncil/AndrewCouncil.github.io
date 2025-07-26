@@ -82,5 +82,16 @@ url = "https://www.linkedin.com/in/drew-council/"
 name = "github"
 url = "https://github.com/AndrewCouncil"
 
+[security.exec]
+allow = [
+  '^(dart-)?sass(-embedded)?$',
+  '^go$',
+  '^git$',
+  '^npx$',
+  '^postcss$',
+  '^tailwindcss$',
+  '^zeditor$'
+]
+
 [taxonomies]
 tag = "tags"
