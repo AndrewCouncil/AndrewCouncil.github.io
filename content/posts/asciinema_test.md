@@ -6,4 +6,4 @@ title = 'Asciinema_test'
 
 Hello!
 
-{{< asciicast src="/telescope-repo-nvim/telescope.json" poster="npt:0:04" autoPlay=true loop=true >}}
+{{< asciicast src="/casts/demo.cast" poster="npt:0:04" autoPlay=true loop=true >}}
