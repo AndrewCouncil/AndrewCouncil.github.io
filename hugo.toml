@@ -12,6 +12,11 @@ unsafe = true
 [markup.highlight]
 style = "catppuccin-mocha"
 
+[module]
+
+[[module.imports]]
+path = "cj.rs/gohugo-asciinema"
+
 [params]
 # Meta description
 description = ""
