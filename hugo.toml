@@ -45,7 +45,7 @@ listSummaries = true
 listDateFormat = "Jan 2 2006"
 
 [params.asciinema.defaults]
-theme = "dracula"
+theme = "catppuccin-mocha"
 loop = true
 autoPlay = true
 speed = 1.0

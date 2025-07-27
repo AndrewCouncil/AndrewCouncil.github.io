@@ -1,6 +1,36 @@
 /* Import JetBrains Mono from Google Fonts with fallback to jsDelivr CDN */
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
+/* Catppuccin Mocha theme for asciinema player */
+.asciinema-player-theme-catppuccin-mocha {
+  /* Foreground (default text) color */
+  --term-color-foreground: #cdd6f4 !important;
+
+  /* Background color */
+  --term-color-background: #313244 !important;
+
+  /* Palette of 16 standard ANSI colors */
+  --term-color-0: #45475a !important;
+  --term-color-1: #f38ba8 !important;
+  --term-color-2: #a6e3a1 !important;
+  --term-color-3: #f9e2af !important;
+  --term-color-4: #89b4fa !important;
+  --term-color-5: #f5c2e7 !important;
+  --term-color-6: #94e2d5 !important;
+  --term-color-7: #bac2de !important;
+  --term-color-8: #585b70 !important;
+  --term-color-9: #f38ba8 !important;
+  --term-color-10: #a6e3a1 !important;
+  --term-color-11: #f9e2af !important;
+  --term-color-12: #89b4fa !important;
+  --term-color-13: #f5c2e7 !important;
+  --term-color-14: #94e2d5 !important;
+  --term-color-15: #a6adc8 !important;
+
+  /* Increase font size for better readability */
+  font-size: 18px !important;
+}
+
 /* Override the monospace font variable to use JetBrains Mono with comprehensive fallbacks */
 :root {
   --font-mono:
