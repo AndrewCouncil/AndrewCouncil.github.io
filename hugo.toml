@@ -49,6 +49,8 @@ theme = "catppuccin-mocha"
 loop = true
 autoPlay = true
 speed = 1.0
+terminalFontSize = '18px'
+fit = false
 
 # Breadcrumbs
 [params.breadcrumbs]
