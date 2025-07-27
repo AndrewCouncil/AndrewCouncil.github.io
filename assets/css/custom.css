@@ -26,9 +26,6 @@
   --term-color-13: #f5c2e7 !important;
   --term-color-14: #94e2d5 !important;
   --term-color-15: #a6adc8 !important;
-
-  /* Increase font size for better readability */
-  font-size: 18px !important;
 }
 
 /* Override the monospace font variable to use JetBrains Mono with comprehensive fallbacks */

@@ -18,6 +18,7 @@ In this post, I hope to give the best, most useful, and most practical terminal-
   - [nushell](#nushell)
   - [gh](#gh)
 - [tui](#tui)
+- [imagemagick, ffmpeg](#imagemagick-ffmpeg)
   - [dive](#dive)
   - [lazygit](#lazygit)
     - [lazydocker](#lazydocker)
@@ -74,9 +75,11 @@ Or, you can install their [command line client](https://github.com/chubin/cheat.
 
 ### gh-copilot
 
-For the more complicated tasks, or for when you're not even sure which _command_ you need, I like to use the [`gh-copilot` extension for `gh`](https://github.com/github/gh-copilot).
+For the more complicated tasks, or for when you're not even sure which _command_ you need, I will often reach for the [`gh-copilot` extension for `gh`](https://github.com/github/gh-copilot).
 
 {{< asciicast src="/casts/gh-copilot.demo" poster="npt:0:04" >}}
+
+I have this aliased to `??` in my terminal so I can quickly search for commands. I find this to be a lot more ergonomic than switching to something like [Warp Terminal](https://www.warp.dev/) when I need to search how to use a single command. [^warp]
 
 ### ripgrep, fd, bat
 
@@ -85,6 +88,8 @@ For the more complicated tasks, or for when you're not even sure which _command_
 ### gh
 
 ## tui
+
+## imagemagick, ffmpeg
 
 ### dive
 
@@ -95,3 +100,5 @@ For the more complicated tasks, or for when you're not even sure which _command_
 ### atuin
 
 ### vim
+
+[^warp]: Warp Terminal is pretty cool, but
