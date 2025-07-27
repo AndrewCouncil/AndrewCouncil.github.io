@@ -8,6 +8,21 @@ In this post, I hope to give the best, most useful, and most practical terminal-
 
 > This post was originally written for a presentation I gave to coworkers. I plan to update it over time with any new discoveries I make.
 
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
+
+- [prerequisite: you need a good tty](#prerequisite-you-need-a-good-tty)
+- [cli](#cli)
+  - [cht.sh](#chtsh)
+  - [ripgrep](#ripgrep)
+  - [nushell](#nushell)
+- [tui](#tui)
+  - [dive](#dive)
+  - [lazygit](#lazygit)
+    - [lazydocker](#lazydocker)
+  - [vim](#vim)
+
+<!-- mdformat-toc end -->
+
 ---
 
 As I progressed in my education and experience as a software engineer, I received a lot of guidance as to how to improve how my software was structured. However, I was never really instructed on how to improve at the process of _creating_ that software. I moved between Eclipse, JetBrains, and VS Code without ever really learning how to navigate a codebase quickly, script programs together, or work with `git` beyond the dreaded:
@@ -41,6 +56,18 @@ Terminal applications can only do so much if the surrounding terminal interface 
 ## cli
 
 ### cht.sh
+
+When the maze of arguements and options are starting to slow you down, **[cht.sh](https://cht.sh/) is your best friend**.
+
+Lets say you are trying to do a simple tar operation.
+
+![hugo](images/tar.webp)
+
+First, you can use it directly from your browser _or through curl_:
+
+```bash
+curl cht.sh/tar
+```
 
 ### ripgrep
 
