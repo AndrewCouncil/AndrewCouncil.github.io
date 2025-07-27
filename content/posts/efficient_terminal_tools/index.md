@@ -13,9 +13,7 @@ In this post, I hope to give the best, most useful, and most practical terminal-
 As I progressed in my education and experience as a software engineer, I received a lot of guidance as to how to improve how my software was structured. However, I was never really instructed on how to improve at the process of _creating_ that software. I moved between Eclipse, JetBrains, and VS Code without ever really learning how to navigate a codebase quickly, script programs together, or work with `git` beyond the dreaded:
 
 ```bash
-git add .
-git commit -m "changes"
-git push
+git add . && git commit -m "changes" && git push
 ```
 
 <figcaption>still a classic, but there is so much more</figcaption>
@@ -32,9 +30,9 @@ Additionally, there's been an influx of usability improvements. As the developer
 
 Terminal applications can only do so much if the surrounding terminal interface is poor.
 
-For Linux and Mac, I highly reccomend both [kitty](https://sw.kovidgoyal.net/kitty/) and [ghostty](https://ghostty.org/). Both have excellent performance and support all the fancy terminal features. Namely, they work with the [kitty terminal graphics protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/) that lets you display images in the terminal!
+**For Linux and Mac**, I highly reccomend both [kitty](https://sw.kovidgoyal.net/kitty/) and [ghostty](https://ghostty.org/). Both have excellent performance and support all the fancy terminal features. Namely, they work with the [kitty terminal graphics protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/) that lets you display images in the terminal!
 
-For Windows, the best I have tried is [alacritty](https://alacritty.org/index.html). Not _quite_ as feature-rich in my experience, but the only tty of this class that is windows-native (that I have found).
+**For Windows**, the best I have tried is [alacritty](https://alacritty.org/index.html). Not _quite_ as feature-rich in my experience, but the only tty of this class that is windows-native (that I have found).
 
 **Also important:** install a [nerdfont](https://www.nerdfonts.com/)! A lot of programs depend on this to display helpful icons and indicators.
 
