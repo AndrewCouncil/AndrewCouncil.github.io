@@ -13,12 +13,15 @@ In this post, I hope to give the best, most useful, and most practical terminal-
 - [prerequisite: you need a good tty](#prerequisite-you-need-a-good-tty)
 - [cli](#cli)
   - [cht.sh](#chtsh)
-  - [ripgrep](#ripgrep)
+  - [gh-copilot](#gh-copilot)
+  - [ripgrep, fd, bat](#ripgrep-fd-bat)
   - [nushell](#nushell)
+  - [gh](#gh)
 - [tui](#tui)
   - [dive](#dive)
   - [lazygit](#lazygit)
     - [lazydocker](#lazydocker)
+  - [atuin](#atuin)
   - [vim](#vim)
 
 <!-- mdformat-toc end -->
@@ -57,21 +60,29 @@ Terminal applications can only do so much if the surrounding terminal interface 
 
 ### cht.sh
 
-When the maze of arguements and options are starting to slow you down, **[cht.sh](https://cht.sh/) is your best friend**.
+When the maze of arguments and options are starting to slow you down, **[cht.sh](https://cht.sh/) is your best friend**. At any terminal with internet access, you can use it to search for command-line tools and their usage.
 
 Lets say you are trying to do a simple tar operation.
 
-![hugo](images/tar.webp)
+[![hugo](images/tar.webp#large "Obligatory xkcd.")](https://xkcd.com/1168/)
 
-First, you can use it directly from your browser _or through curl_:
+First, you can use it directly from your browser _or through curl_: `curl cht.sh/tar`
 
-```bash
-curl cht.sh/tar
-```
+Or, you can install their [command line client](https://github.com/chubin/cheat.sh#command-line-client-chtsh). I prefer this, as you don't need to use URL syntax to search. I'll run `cht.sh tar`:
 
-### ripgrep
+{{< include-html "content/posts/efficient_terminal_tools/cht_sh.html" >}}
+
+### gh-copilot
+
+For the more complicated tasks, or for when you're not even sure which _command_ you need, I like to use the [`gh-copilot` extension for `gh`](https://github.com/github/gh-copilot).
+
+{{< asciicast src="/casts/gh-copilot.demo" poster="npt:0:04" >}}
+
+### ripgrep, fd, bat
 
 ### nushell
+
+### gh
 
 ## tui
 
@@ -80,5 +91,7 @@ curl cht.sh/tar
 ### lazygit
 
 #### lazydocker
+
+### atuin
 
 ### vim

@@ -44,6 +44,12 @@ paginationSize = 100
 listSummaries = true
 listDateFormat = "Jan 2 2006"
 
+[params.asciinema.defaults]
+theme = "dracula"
+loop = true
+autoPlay = true
+speed = 1.0
+
 # Breadcrumbs
 [params.breadcrumbs]
 enabled = false
