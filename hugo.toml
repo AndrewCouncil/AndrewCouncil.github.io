@@ -49,6 +49,7 @@ theme = "catppuccin-mocha"
 loop = true
 autoPlay = true
 speed = 1.0
+terminalFontFamily = "JetBrains Mono, ui-monospace, SF Mono, Cascadia Code, Roboto Mono, Consolas, Courier New, monospace"
 
 # Breadcrumbs
 [params.breadcrumbs]
