@@ -11,19 +11,16 @@ In this post, I hope to give the best, most useful, and most practical terminal-
 <!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
 
 - [prerequisite: you need a good tty](#prerequisite-you-need-a-good-tty)
-- [cli](#cli)
-  - [cht.sh](#chtsh)
-  - [gh-copilot](#gh-copilot)
-  - [ripgrep and fd](#ripgrep-and-fd)
-  - [gh](#gh)
-  - [imagemagick, ffmpeg](#imagemagick-ffmpeg)
-  - [nushell](#nushell)
-- [tui](#tui)
-  - [dive](#dive)
-  - [lazygit](#lazygit)
-    - [lazydocker](#lazydocker)
-  - [atuin](#atuin)
-  - [vim](#vim)
+- [cht.sh](#chtsh)
+- [gh-copilot](#gh-copilot)
+- [ripgrep and fd](#ripgrep-and-fd)
+- [gh](#gh)
+- [imagemagick, ffmpeg](#imagemagick-ffmpeg)
+- [dive](#dive)
+- [lazygit and lazydocker](#lazygit-and-lazydocker)
+- [atuin](#atuin)
+- [vim](#vim)
+- [nushell](#nushell)
 
 <!-- mdformat-toc end -->
 
@@ -57,9 +54,7 @@ Terminal applications can only do so much if the surrounding terminal interface 
 
 ---
 
-## cli
-
-### cht.sh
+## cht.sh
 
 When the maze of arguments and options are starting to slow you down, **[cht.sh](https://cht.sh/) is your best friend**. At any terminal with internet access, you can use it to search for command-line tools and their usage.
 
@@ -73,7 +68,7 @@ Or, you can install their [command line client](https://github.com/chubin/cheat.
 
 {{< include-html "content/posts/efficient_terminal_tools/html/cht_sh.html" >}}
 
-### gh-copilot
+## gh-copilot
 
 For the more complicated tasks, or for when you're not even sure which _command_ you need, I will often reach for the [`gh-copilot` extension for `gh`](https://github.com/github/gh-copilot).
 
@@ -81,7 +76,7 @@ For the more complicated tasks, or for when you're not even sure which _command_
 
 I have this aliased to `??` in my terminal so I can quickly search for commands. I find this to be a lot more ergonomic than switching to something like [Warp Terminal](https://www.warp.dev/) when I need to search how to use a single command. [^warp]
 
-### ripgrep and fd
+## ripgrep and fd
 
 When I speak of older tools getting a modern redesign, these are probably the prime examples.
 
@@ -89,7 +84,7 @@ When I speak of older tools getting a modern redesign, these are probably the pr
 
 {{< asciicast src="/casts/rg_fd.demo" poster="npt:0:04" >}}
 
-### gh
+## gh
 
 This section is basically here to say: **stop trying to script GitHub with `curl`!**
 
@@ -100,50 +95,65 @@ NAME                     DESCRIPTION              INFO              UPDATED
 bizmythy/nixconf         Nix Configuration Files  public            about 1 hour ago
 bizmythy/bizmythy.gi...                           public            about 2 hours ago
 bizmythy/nixpkgs         Nix Packages collect...  public, fork      about 19 hours ago
-bizmythy/masklint        Lint your mask targets   public, fork      about 2 days ago
-bizmythy/typo            A simple Hugo theme      public, fork      about 3 days ago
 bizmythy/typeracer-FPGA                           public, archived  about 4 days ago
 bizmythy/hugo            The world’s fastest ...  public, fork      about 4 days ago
-bizmythy/chroma          A general purpose sy...  public, fork      about 4 days ago
 bizmythy/zed             configuration for ze...  public            about 5 days ago
-bizmythy/nix-project...  Basic project templa...  public            about 5 days ago
-bizmythy/placeparse      extracting google ma...  public            about 28 days ago
-bizmythy/hugo-PaperModX  A fast, clean, respo...  public, fork      about 4 months ago
-bizmythy/nixnvim         Neovim configuration...  public            about 5 months ago
-bizmythy/resume          LaTeX code for my pe...  public            about 1 year ago
-bizmythy/adventofcod...                           public            about 1 year ago
-bizmythy/dotfiles        dotfiles for linux i...  public            about 2 years ago
-bizmythy/aelevate-co...  ProjectIO Arduino co...  public            about 2 years ago
-bizmythy/RADS-code                                public, fork      about 4 years ago
-bizmythy/TowerTakeov...                           public            about 5 years ago
-bizmythy/TurningPoint    All code and digitiz...  public, fork      about 6 years ago
+...
 ```
 
 These can be output as `json` and used in scripting quite easily.
 
-### imagemagick, ffmpeg
+> This works great with [nushell](#nushell)!
 
-### nushell
+## imagemagick, ffmpeg
 
-[Nushell](https://www.nushell.sh/) is perhaps my favorite CLI tool.
+## dive
 
-It is probably wrong to even call it a _tool_, as `nu` is a fully-fledged _shell_ which can be in lieu of `bash`/`zsh`/`fish`. [^posix]
+## lazygit and lazydocker
 
-Nushell provides new versions of `ls`, `du`,
+## atuin
+
+## vim
+
+## nushell
+
+[Nushell](https://www.nushell.sh/) is my absolute favorite of these tools.
+
+It is probably wrong to even call it a _tool_, as `nu` is a fully-fledged _shell_ which can be in lieu of `bash`/`zsh`/`fish`. [^posix] The key feature that sets Nushell apart from these is **Pipelines**.
+
+Pipelines are a lot like traditional piping of stdin to stdout, but in Nushell they can store _structured data_. These look a lot like `json` and are printed as nicely formatted tables. You can then leverage the `nu` language functional operators to do some fairly powerful things:
 
 {{< asciicast src="/casts/nushell.demo" poster="npt:0:04" >}}
 
-## tui
+Here's a `nu` script to get the Git-LFS files in a repo and sort by the ones using the most space.
 
-### dive
+```nu
+#!/usr/bin/env nu
 
-### lazygit
+let lfs_file_data = (
+  git lfs ls-files --size |
+    detect columns -n |
+    reject column1 |
+    rename hash file size |
+    update size {|row| $row.size | str substring 1..-2 | into filesize} |
+    sort-by size
+)
 
-#### lazydocker
+print $lfs_file_data
 
-### atuin
+let total_size = ($lfs_file_data | get size | math sum)
+print $"Total size: ($total_size)"
+```
 
-### vim
+Here's what the script output looks like:
+
+{{< include-html "content/posts/efficient_terminal_tools/html/lfs_sizes.html" >}}
+
+The nice things here:
+
+- `git lfs` commands don't have the ability to output `json`, but you can just pipe them into `detect columns` and it will figure the data structure out for you!
+- There is a first-class `filesize` datatype, which we convert a string to and sort by. I don't even want to know the crazy scripting it would take to properly compare mega**bits** with kilo**bytes** without this.
+- The biggest selling point for me: _I didn't have to look up anything._ No googling. No reading manpages. `nu` has a very high skill floor, and it can become very powerful if you take the time to read through the [excellent Nushell Book](https://www.nushell.sh/book/).
 
 [^warp]: Warp Terminal is pretty cool, but it lacks a lot of the rendering features I have come to expect from my TTY and can have some compatibility issues with some TUI applications.
 
