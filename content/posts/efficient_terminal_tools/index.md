@@ -119,9 +119,9 @@ These can be output as `json` and used in scripting quite easily.
 
 [Nushell](https://www.nushell.sh/) is my absolute favorite of these tools.
 
-It is probably wrong to even call it a _tool_, as `nu` is a fully-fledged _shell_ which can be in lieu of `bash`/`zsh`/`fish`. [^posix] The key feature that sets Nushell apart from these is **Pipelines**.
+It is probably wrong to even call it a _tool_, as `nu` is a fully-fledged _shell_ which can be in lieu of `bash`/`zsh`/`fish`. [^posix] The key feature that sets `nu` apart from these is **Pipelines**.
 
-Pipelines are a lot like traditional piping of stdin to stdout, but in Nushell they can store _structured data_. These look a lot like `json` and are printed as nicely formatted tables. You can then leverage the `nu` language functional operators to do some fairly powerful things:
+Pipelines are a lot like traditional piping of stdin to stdout, but in `nu` they can store _structured data_. These look a lot like `json` and are printed as nicely formatted tables. You can then leverage the `nu` language functional operators to do some fairly powerful things:
 
 {{< asciicast src="/casts/nushell.demo" poster="npt:0:04" >}}
 

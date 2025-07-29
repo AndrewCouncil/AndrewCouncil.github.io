@@ -54,9 +54,7 @@ h6,
 li,
 td,
 th,
-div,
-span:not(code span),
-a:not(code a) {
+div {
   font-family: var(--font-sans) !important;
 }
 
