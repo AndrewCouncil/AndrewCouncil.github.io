@@ -1,6 +1,9 @@
 /* Import JetBrains Mono from Google Fonts with fallback to jsDelivr CDN */
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
+/* Import Noto Sans from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 /* Catppuccin Mocha theme for asciinema player */
 .asciinema-player-theme-catppuccin-mocha {
   /* Foreground (default text) color */
@@ -28,11 +31,33 @@
   --term-color-15: #a6adc8 !important;
 }
 
-/* Override the monospace font variable to use JetBrains Mono with comprehensive fallbacks */
+/* Override font variables to use custom fonts with comprehensive fallbacks */
 :root {
   --font-mono:
     "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono",
     Consolas, "Courier New", monospace;
+  --font-sans:
+    "Noto Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Override body and main text elements to use Noto Sans */
+body,
+html,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+td,
+th,
+div,
+span:not(code span),
+a:not(code a) {
+  font-family: var(--font-sans) !important;
 }
 
 /* Ensure all code elements use the JetBrains Mono font */
