@@ -15,8 +15,8 @@ In this post, I hope to give the best, most useful, and most practical terminal-
 - [gh-copilot](#gh-copilot)
 - [ripgrep and fd](#ripgrep-and-fd)
 - [gh](#gh)
-- [lazygit and lazydocker](#lazygit-and-lazydocker)
 - [atuin](#atuin)
+- [lazygit and lazydocker](#lazygit-and-lazydocker)
 - [vim](#vim)
 - [nushell](#nushell)
 - [Honorable Mentions](#honorable-mentions)
@@ -73,7 +73,7 @@ Or, you can install their [command line client](https://github.com/chubin/cheat.
 
 For the more complicated tasks, or for when you're not even sure which _command_ you need, I will often reach for the **[gh-copilot](https://github.com/github/gh-copilot) extension for `gh`**.
 
-{{< asciicast src="/casts/gh-copilot.demo" poster="npt:0:04" >}}
+{{< asciicast src="/casts/gh-copilot.demo" >}}
 
 I have this aliased to `??` in my terminal so I can quickly search for commands. I find this to be a lot more ergonomic than switching to something like [Warp Terminal](https://www.warp.dev/) when I need to search how to use a single command. [^warp]
 
@@ -85,7 +85,7 @@ When I speak of older tools getting a modern redesign, these are probably the pr
 
 **[fd](https://github.com/sharkdp/fd) and [ripgrep](https://github.com/BurntSushi/ripgrep)** are fantastic alternatives to `find` and `grep`, and are multithreaded by default. [^multithread] They have become my default for scripting operations to find certain regex patterns and file names quickly.
 
-{{< asciicast src="/casts/rg_fd.demo" poster="npt:0:04" >}}
+{{< asciicast src="/casts/rg_fd.demo" >}}
 
 ---
 
@@ -110,17 +110,37 @@ bizmythy/zed             configuration for ze...  public            about 5 days
 
 ---
 
-## lazygit and lazydocker
+## atuin
 
-`lazygit` and `lazydocker` are wonderful TUIs for `git` and `docker` respectively.
+One of the most aggravating thing about working in the terminal can be when you know you have run a command before but it can't be found in your history. Maybe it was in another session, maybe your history ran out of space, or maybe it was run on a completely different machine.
+
+**[atuin](https://github.com/ellie/atuin)** is a terminal history manager that aims to always capture the history of the commands you run. This means syncing across sessions, windows, different terminals, and even different devices if you choose.
+
+It stores all of your command history in a local SQLite database and replaces your `CTRL+R` search with a fuzzyfind of that history database in a nice TUI.
+
+{{< asciicast src="/casts/atuin.demo" speed=1.5 >}}
 
 ---
 
-## atuin
+## lazygit and lazydocker
+
+`lazygit` and `lazydocker` are wonderful TUIs for `git` and `docker` respectively by [@jesseduffield](https://github.com/jesseduffield/).
+
+{{< asciicast src="/casts/lazytui.demo" speed=2 >}}
+
+In both, the keybinds are nicely displayed for you at the bottom, but you can even _use your mouse_.
+
+Both have almost entirely replaced most of the `docker` and `git` calls I would type out before. `lazygit` especially has completely changed how I work with git, as it allows for quickly selecting files to add, exclude, and discard from your working `git` changes to your commit.
 
 ---
 
 ## vim
+
+I don't mean to beat a dead horse, but I truly don't understand why vi-style keybindings are not the industry standard.
+
+I'm not adamant that you use full-fledged `vim` itself. VS Code has [VSCodeVim](https://github.com/VSCodeVim/Vim), which works great most of the time. I use [zed](https://zed.dev/) for my development, which has an extremely robust vim mode. Even `emacs` has "evil" mode.
+
+Regardless, I _highly_ recommend taking a week, or even a weekend, to just give the keybinds a try in your favorite editor. Once you summit the initial learning curve, you will really see the benefits. I was a doubter myself at first, but after trying it, I haven't looked back.
 
 ---
 
@@ -132,7 +152,7 @@ It is probably wrong to even call it a _tool_, as `nu` is a fully-fledged _shell
 
 Pipelines are a lot like traditional piping of stdin to stdout, but in `nu` they can store _structured data_. These look a lot like `json` and are printed as nicely formatted tables. You can then leverage the `nu` language functional operators to do some fairly powerful things:
 
-{{< asciicast src="/casts/nushell.demo" poster="npt:0:04" >}}
+{{< asciicast src="/casts/nushell.demo" >}}
 
 Here's a `nu` script to get the Git-LFS files in a repo and sort by the ones using the most space.
 
