@@ -1,7 +1,7 @@
 +++
-date = '2025-07-26T15:06:55-04:00'
-draft = true
-title = 'efficient terminal tools'
+date = "2025-07-29T22:19:41"
+draft = false
+title = "efficient terminal tools"
 +++
 
 In this post, I hope to give the best, most useful, and most practical terminal-based tools that I regularly use. These are the tools I wish someone had forced me to try years ago, so I hope to convince you to try them here.
