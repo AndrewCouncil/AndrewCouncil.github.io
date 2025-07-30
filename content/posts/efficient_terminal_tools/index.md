@@ -25,7 +25,7 @@ In this post, I hope to give the best, most useful, and most practical terminal-
 
 ---
 
-As I progressed in my education and experience as a software engineer, I received a lot of guidance as to how to improve how my software was structured. However, I was never really instructed on how to improve at the process of _creating_ that software. I moved between Eclipse, JetBrains, and VS Code without ever really learning how to navigate a codebase quickly, script programs together, or work with `git` beyond the dreaded:
+As I progressed in my education and experience as a software engineer, I received a lot of guidance as to how to improve how my software was structured. However, I was never really instructed on the _process_ of creating that software. I moved between Eclipse, JetBrains, and VS Code without ever really learning how to navigate a codebase quickly, script programs together, or work with `git` beyond the dreaded:
 
 ```bash
 git add . && git commit -m "changes" && git push
@@ -33,9 +33,9 @@ git add . && git commit -m "changes" && git push
 
 <figcaption>still a classic, but there is so much more</figcaption>
 
-Later, I saw online what certain engineers and [bash wizards](https://www.youtube.com/watch?v=L967hYylZuc) were capable of. Certain things feel intractable, like knowledge of every `awk` and `bash` intricacy. However, as I used the tools (as with everything), I got more comfortable and began to move quicker.
+Later, I saw online what certain engineers and [bash wizards](https://www.youtube.com/watch?v=L967hYylZuc) were capable of. Certain things feel intractable—like mastering every `awk` and `bash` nuance. However, as I used the tools, I got more comfortable and began to move faster.
 
-Additionally, there's been an influx of usability improvements. As the developer interest is growing with languages like Rust and Zig, the chance to start fresh and redesign has let to a new wave of excellent and easy to use tools.
+Additionally, there’s been an influx of usability improvements. As developer interest grows in languages like Rust and Zig, the chance to redesign from scratch has led to a new wave of excellent, easy-to-use tools.
 
 ---
 
@@ -45,11 +45,11 @@ Additionally, there's been an influx of usability improvements. As the developer
 
 Terminal applications can only do so much if the surrounding terminal interface is poor.
 
-**For Linux and Mac**, I highly reccomend both [kitty](https://sw.kovidgoyal.net/kitty/) and [ghostty](https://ghostty.org/). Both have excellent performance and support all the fancy terminal features. Namely, they work with the [kitty terminal graphics protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/) that lets you display images in the terminal!
+**For Linux and Mac**, I highly recommend either [kitty](https://sw.kovidgoyal.net/kitty/) or [ghostty](https://ghostty.org/). Both have excellent performance and support all the fancy terminal features. Namely, they work with the [kitty terminal graphics protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/) that lets you display images in the terminal!
 
-**For Windows**, the best I have tried is [alacritty](https://alacritty.org/index.html). Not _quite_ as feature-rich in my experience, but the only tty of this class that is windows-native (that I have found).
+**For Windows**, [alacritty](https://alacritty.org/index.html) is the best native option I have found. Not _quite_ as feature-rich in my experience, but the only tty of this class that is windows-native (that I have found).
 
-**Also important:** install a [nerdfont](https://www.nerdfonts.com/)! A lot of programs depend on this to display helpful icons and indicators.
+**Also important:** Install a [Nerd Font](https://www.nerdfonts.com/)! Many programs depend on these for icons.
 
 ---
 
@@ -128,6 +128,8 @@ It stores all of your command history in a local SQLite database and replaces yo
 
 {{< asciicast src="/casts/lazytui.demo" speed=2 >}}
 
+<figcaption>When you learn just a few keyboard shortcuts, you can really move quickly in these tools.</figcaption>
+
 In both, the keybinds are nicely displayed for you at the bottom, but you can even _use your mouse_.
 
 Both have almost entirely replaced most of the `docker` and `git` calls I would type out before. `lazygit` especially has completely changed how I work with git, as it allows for quickly selecting files to add, exclude, and discard from your working `git` changes to your commit.
@@ -186,7 +188,7 @@ The nice things here:
 
 ## Honorable Mentions
 
-These tools are more niche, but they come very in handy when certain tasks are needed.
+These tools are more niche, but come in handy for specific tasks.
 
 ---
 
