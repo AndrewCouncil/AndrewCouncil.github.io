@@ -190,19 +190,13 @@ The nice things here:
 
 These tools are more niche, but come in handy for specific tasks.
 
----
-
 I have never had a good experience going to shady file type conversion websites. They are always slow, covered in ads, and usually don't work.
 
 For converting, cropping, editing, and re-encoding videos, use [**ffmpeg**](https://ffmpeg.org/). For images, use [**imagemagick**](https://imagemagick.org/).
 
 > This isn't a terminal tool, but for PDF arranging, try [**pdfarranger**](https://github.com/pdfarranger/pdfarranger).
 
----
-
 If you are working with docker images, [**dive**](https://github.com/wagoodman/dive) is a great tool for inspecting and analyzing docker images. It has often highlighted issues I could not find with any other image analysis tool.
-
----
 
 `bat` is just `cat` with syntax highlighting. I use it all the time, especially because it behaves exactly like `cat` if it detects it is being piped into another command.
 
