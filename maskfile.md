@@ -66,3 +66,13 @@ pypandoc.convert_text(
     extra_args=["-V", "geometry:margin=0.5in"],
 )
 ```
+
+## post (name)
+
+> Create a new post with correct structure
+
+```bash
+hugo new content content/posts/$name/index.md \
+  --editor zeditor
+# TODO: add sed for title replace
+```

@@ -1,0 +1,30 @@
+<pre>
+<span style="filter: contrast(70%) brightness(190%);background-color:black;"> cheat:tar </span>
+<span style="color:#d5d5d5;">---</span>
+<span style="color:#d5d5d5;">tags:</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">[</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">compression</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">]</span>
+<span style="color:#d5d5d5;">---</span>
+<span style="font-style:italic;color:#aaaaaa;"># To extract an uncompressed archive:</span>
+<span style="color:#d5d5d5;">tar</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">-xvf</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">/path/to/foo.tar</span>
+
+<span style="font-style:italic;color:#aaaaaa;"># To extract a .tar in specified directory:</span>
+<span style="color:#d5d5d5;">tar</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">-xvf</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">/path/to/foo.tar</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">-C</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">/path/to/destination/</span>
+
+<span style="font-style:italic;color:#aaaaaa;"># To create an uncompressed archive:</span>
+<span style="color:#d5d5d5;">tar</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">-cvf</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">/path/to/foo.tar</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">/path/to/foo/</span>
+...
+
+<span style="filter: contrast(70%) brightness(190%);background-color:black;"> tldr:tar </span>
+<span style="font-style:italic;color:#aaaaaa;"># tar</span>
+<span style="font-style:italic;color:#aaaaaa;"># Archiving utility.</span>
+<span style="font-style:italic;color:#aaaaaa;"># Often combined with a compression method, such as gzip or bzip2.</span>
+<span style="font-style:italic;color:#aaaaaa;"># More information: &lt;https://www.gnu.org/software/tar&gt;.</span>
+
+<span style="font-style:italic;color:#aaaaaa;"># [c]reate an archive and write it to a [f]ile:</span>
+<span style="color:#d5d5d5;">tar</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">cf</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">path/to/target.tar</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">path/to/file1</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">path/to/file2</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">...</span>
+
+<span style="font-style:italic;color:#aaaaaa;"># [c]reate a g[z]ipped archive and write it to a [f]ile:</span>
+<span style="color:#d5d5d5;">tar</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">czf</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">path/to/target.tar.gz</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">path/to/file1</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">path/to/file2</span><span style="color:#606060;"> </span><span style="color:#d5d5d5;">...</span>
+...
+</pre>
+
+<figcaption>Truncated output of "cht.sh tar"</figcaption>

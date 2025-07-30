@@ -12,6 +12,11 @@ unsafe = true
 [markup.highlight]
 style = "catppuccin-mocha"
 
+[module]
+
+[[module.imports]]
+path = "cj.rs/gohugo-asciinema"
+
 [params]
 # Meta description
 description = ""
@@ -38,6 +43,13 @@ homeCollection = "posts"
 paginationSize = 100
 listSummaries = true
 listDateFormat = "Jan 2 2006"
+
+[params.asciinema.defaults]
+theme = "catppuccin-mocha"
+loop = true
+autoPlay = true
+speed = 1.0
+terminalFontFamily = "JetBrains Mono, ui-monospace, SF Mono, Cascadia Code, Roboto Mono, Consolas, Courier New, monospace"
 
 # Breadcrumbs
 [params.breadcrumbs]
@@ -76,6 +88,17 @@ url = "https://www.linkedin.com/in/drew-council/"
 [[params.social]]
 name = "github"
 url = "https://github.com/AndrewCouncil"
+
+[security.exec]
+allow = [
+  '^(dart-)?sass(-embedded)?$',
+  '^go$',
+  '^git$',
+  '^npx$',
+  '^postcss$',
+  '^tailwindcss$',
+  '^zeditor$'
+]
 
 [taxonomies]
 tag = "tags"

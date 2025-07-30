@@ -25,7 +25,12 @@
         ps.mdformat-gfm
         ps.mdformat-frontmatter
         ps.mdformat-footnote # footnotes break othewise
-        ps.mdformat-gfm-alerts
+        (ps.mdformat-toc.overrideAttrs {
+          meta.broken = false;
+          doCheck = false;
+          doInstallCheck = false;
+          pytestCheckPhase = "";
+        })
       ]);
     };
   };
@@ -35,6 +40,8 @@
     excludes = [
       "themes/*"
       "*.html"
+      "public/*"
+      ".direnv/*"
     ];
     formatter = {
       # formatter-specific settings
