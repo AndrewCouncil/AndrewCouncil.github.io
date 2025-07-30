@@ -15,12 +15,11 @@ In this post, I hope to give the best, most useful, and most practical terminal-
 - [gh-copilot](#gh-copilot)
 - [ripgrep and fd](#ripgrep-and-fd)
 - [gh](#gh)
-- [imagemagick, ffmpeg](#imagemagick-ffmpeg)
-- [dive](#dive)
 - [lazygit and lazydocker](#lazygit-and-lazydocker)
 - [atuin](#atuin)
 - [vim](#vim)
 - [nushell](#nushell)
+- [Honorable Mentions](#honorable-mentions)
 
 <!-- mdformat-toc end -->
 
@@ -68,27 +67,33 @@ Or, you can install their [command line client](https://github.com/chubin/cheat.
 
 {{< include-html "content/posts/efficient_terminal_tools/html/cht_sh.html" >}}
 
+---
+
 ## gh-copilot
 
-For the more complicated tasks, or for when you're not even sure which _command_ you need, I will often reach for the [`gh-copilot` extension for `gh`](https://github.com/github/gh-copilot).
+For the more complicated tasks, or for when you're not even sure which _command_ you need, I will often reach for the **[gh-copilot](https://github.com/github/gh-copilot) extension for `gh`**.
 
 {{< asciicast src="/casts/gh-copilot.demo" poster="npt:0:04" >}}
 
 I have this aliased to `??` in my terminal so I can quickly search for commands. I find this to be a lot more ergonomic than switching to something like [Warp Terminal](https://www.warp.dev/) when I need to search how to use a single command. [^warp]
 
+---
+
 ## ripgrep and fd
 
 When I speak of older tools getting a modern redesign, these are probably the prime examples.
 
-`fd` and `ripgrep` are fantastic alternatives to `find` and `grep`, and are multithreaded by default. [^multithread] They have become my default for scripting operations to find certain regex patterns and file names quickly.
+**[fd](https://github.com/sharkdp/fd) and [ripgrep](https://github.com/BurntSushi/ripgrep)** are fantastic alternatives to `find` and `grep`, and are multithreaded by default. [^multithread] They have become my default for scripting operations to find certain regex patterns and file names quickly.
 
 {{< asciicast src="/casts/rg_fd.demo" poster="npt:0:04" >}}
+
+---
 
 ## gh
 
 This section is basically here to say: **stop trying to script GitHub with `curl`!**
 
-`gh` provides a helpful wrapper over many GitHub APIs and `git` operations. This integration allows for commands like `gh repo clone bizmythy/nixconf`, which clones based on the GitHub repo name using your preference setting for SSH/HTTP. It also lets you make queries like `gh repo list --visibility=public`:
+**[gh](https://github.com/cli/cli)** provides a helpful wrapper over many GitHub APIs and `git` operations. This integration allows for commands like `gh repo clone bizmythy/nixconf`, which clones based on the GitHub repo name using your preference setting for SSH/HTTP. It also lets you make queries like `gh repo list --visibility=public`:
 
 ```
 NAME                     DESCRIPTION              INFO              UPDATED
@@ -101,19 +106,23 @@ bizmythy/zed             configuration for ze...  public            about 5 days
 ...
 ```
 
-These can be output as `json` and used in scripting quite easily.
+`gh` can output as `json`, which can be used in scripting quite easily.
 
-> This works great with [nushell](#nushell)!
-
-## imagemagick, ffmpeg
-
-## dive
+---
 
 ## lazygit and lazydocker
 
+`lazygit` and `lazydocker` are wonderful TUIs for `git` and `docker` respectively.
+
+---
+
 ## atuin
 
+---
+
 ## vim
+
+---
 
 ## nushell
 
@@ -155,6 +164,26 @@ The nice things here:
 - There is a first-class `filesize` datatype, which we convert a string to and sort by. I don't even want to know the crazy scripting it would take to properly compare mega**bits** with kilo**bytes** without this.
 - The biggest selling point for me: _I didn't have to look up anything._ No googling. No reading manpages. `nu` has a very high skill floor, and it can become very powerful if you take the time to read through the [excellent Nushell Book](https://www.nushell.sh/book/).
 
+## Honorable Mentions
+
+These tools are more niche, but they come very in handy when certain tasks are needed.
+
+---
+
+I have never had a good experience going to shady file type conversion websites. They are always slow, covered in ads, and usually don't work.
+
+For converting, cropping, editing, and re-encoding videos, use [**ffmpeg**](https://ffmpeg.org/). For images, use [**imagemagick**](https://imagemagick.org/).
+
+> This isn't a terminal tool, but for PDF arranging, try [**pdfarranger**](https://github.com/pdfarranger/pdfarranger).
+
+---
+
+If you are working with docker images, [**dive**](https://github.com/wagoodman/dive) is a great tool for inspecting and analyzing docker images. It has often highlighted issues I could not find with any other image analysis tool.
+
+---
+
+`bat` is just `cat` with syntax highlighting. I use it all the time, especially because it behaves exactly like `cat` if it detects it is being piped into another command.
+
 [^warp]: Warp Terminal is pretty cool, but it lacks a lot of the rendering features I have come to expect from my TTY and can have some compatibility issues with some TUI applications.
 
 [^multithread]: A capable user of [GNU Parallel](https://www.gnu.org/software/parallel/) can make `grep` and `find` operations parallelized, which is useful in scripting. However, for most use cases, having these optimizations compiled in is very beneficial.
@@ -162,4 +191,4 @@ The nice things here:
 [^posix]:
     Similar to `fish`, `nu` is _extremely_ not POSIX compliant, so copy-pasting or running scripts with `nu` as the interpreter are bound to fail often.
 
-    Never set a non-POSIX shell as your sytsem's default shell. I set `nu` as the default program that launches when I start my TTY.
+    Never set a non-POSIX shell as your system's default shell. I set `nu` as the default program that launches when I start my TTY.
